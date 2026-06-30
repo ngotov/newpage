@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Наталья Галюк‑Каушене – Живу как хочу!</title>
+    <!--
+      Основной файл стилей. Здесь определены переменные цветовой
+      палитры, глобальные правила, адаптивность и оформление всех
+      секций страницы. 
+    -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Подключаем FontAwesome для иконок. В случае, если CDN
+         заблокирован, используются fallback символы в CSS. -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-atqF0EXjx1vmB5CuWHtGTEnCy/br57nUEQOC89LzE7glYj4vBM7Ey2UyHpCulbbpD6q2t24MmM7Aj0O7l3K2RQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Шапка сайта с логотипом и навигационным меню -->
+    <header class="site-header">
+      <div class="container header-container">
+        <a href="#hero" class="logo">Наталья Галюк‑Каушене</a>
+        <nav class="main-nav" id="mainNav">
+          <ul>
+            <li><a href="#hero" class="active"><i class="fa fa-home"></i></a></li>
+            <li><a href="#about">Кто&nbsp;я</a></li>
+            <li><a href="#online">Личные&nbsp;сессии</a></li>
+            <li><a href="#online">Групповые&nbsp;сессии</a></li>
+            <li><a href="#online">Курсы</a></li>
+            <li><a href="#online">Онлайн</a></li>
+            <li><a href="#freebies">Бесплатно</a></li>
+            <li><a href="#testimonials">Отзывы</a></li>
+            <li><a href="#contact">Контакты</a></li>
+          </ul>
+        </nav>
+        <!-- Кнопка-бургер для мобильного меню -->
+        <button class="nav-toggle" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Блок 1: приветствие и главное фото -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-text">
+          <h1>Наталья&nbsp;Галюк‑Каушене</h1>
+          <p class="hero-tagline">ЖИВУ&nbsp;как&nbsp;хочу!</p>
+          <ul class="hero-list">
+            <li>Мастер‑коуч (MCC&nbsp;ICF)</li>
+            <li>Денежный психолог</li>
+            <li>Ментор бизнесменов, коучей, психологов</li>
+            <li>Создатель авторских тренингов и курсов</li>
+            <li>Спикер международных конференций</li>
+            <li>10+ лет в психологическом консультировании и коучинге</li>
+            <li>Бизнес‑леди, бизнес‑тренер</li>
+            <li>Счастливая женщина</li>
+            <li>Мама двух докторов наук</li>
+          </ul>
+        </div>
+        <div class="hero-image">
+          <img src="public/imges/foto_1_blok.png" alt="Наталья Галюк‑Каушене" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок 2: кто я и видео -->
+    <section id="about" class="about-section">
+      <div class="container about-container">
+          <div class="about-text">
+            <h2>Кто&nbsp;я?</h2>
+            <p>Привет. Меня зовут Наталья&nbsp;Галюк‑Каушене. И мой жизненный слоган:&nbsp;<strong>ЖИВУ как хочу!</strong> Если ты оказался на этой странице&nbsp;— возможно, ты уже слышал обо мне и о том, что тысячи людей смогли изменить свою жизнь благодаря моей работе. И да, сегодня действительно много информации вокруг, и легко потеряться в этом потоке экспертов и обещаний. Я понимаю это.</p>
+            <p>Мой главный принцип&nbsp;— учиться у практиков. У тех, кто не только говорит, но и каждый день применяет знания в реальной жизни, проверяет их опытом, систематизирует и усиливает результат. Когда я обучаю теме денег — я опираюсь на тех, кто уже прошёл путь к своим первым миллионам, а не просто изучал теорию. Когда мы говорим об отношениях и семье — важно смотреть на тех, у кого есть реальный устойчивый опыт, а не только советы из теории или чужих ошибок. Я за практику. За результат. За реальную жизнь, а не красивые концепции. И если ты здесь — давай знакомиться ближе. Я&nbsp;— профессионал, к которому приходят за разрешением жить и зарабатывать.</p>
+          </div>
+          <div class="about-video">
+            <video controls preload="metadata">
+              <source src="public/video/video_blok_2.mp4" type="video/mp4" />
+              Ваш браузер не поддерживает воспроизведение видео.
+            </video>
+          </div>
+      </div>
+    </section>
+
+    <!-- Блок 3: История и настоящее -->
+    <section id="history" class="history-section">
+      <div class="container history-container">
+        <div class="history-column">
+          <h3>Всего 3&nbsp;года назад я бы представлялась так:</h3>
+          <ul>
+            <li>Врач‑биохимик, переехавшая в Литву в конце 90‑х, начавшая жизнь практически с нуля</li>
+            <li>Специалист индустрии красоты, прошедшая путь от практики до преподавания и судейства на форумах</li>
+            <li>Мастер процедур эстетической косметологии, получившая диплом в Московском Институте Красоты</li>
+            <li>Магистр экономики Международной Бизнес Школы в Вильнюсе</li>
+            <li>Эксперт и тренер для специалистов бьюти‑сферы, помогающий увеличивать доход через системный подход</li>
+            <li>Практик в сфере коммуникации, психологии влияния и работы с клиентским мышлением</li>
+            <li>Специалист, который прошёл путь через сильные жизненные кризисы и трансформации</li>
+            <li>Женщина, которая после тяжёлой автомобильной аварии прошла восстановление через работу с мышлением и внутренними ресурсами</li>
+            <li>Человек, который начал глубже изучать психику, поведение и бессознательные процессы</li>
+            <li>Коуч международного уровня, обучавшийся у ведущих мировых школ (включая Лондонские программы и Erickson Coaching International)</li>
+            <li>Мастер коуч PCC ICF, а затем MCC ICF&nbsp;— высший международный уровень коучинга</li>
+            <li>Создатель авторских программ по денежному мышлению и трансформации сценариев поведения</li>
+          </ul>
+        </div>
+        <div class="history-column">
+          <h3>А сегодня я представляю себя так:</h3>
+          <ul>
+            <li>Женщина, которая прошла путь от полной перезагрузки жизни в другой стране до создания международной практики</li>
+            <li>Человек, который знает, как формируется денежное мышление&nbsp;— через опыт, кризисы и практику</li>
+            <li>Психолог и коуч MCC ICF, работающий с глубинными сценариями личности</li>
+            <li>Специалист, объединяющий коучинг, психологию и работу с бессознательным</li>
+            <li>Автор методик по трансформации денежных и жизненных сценариев</li>
+            <li>Эксперт, который помогает увидеть, почему человек не зарабатывает на своём потенциале</li>
+            <li>Проводник в точку внутренней опоры, где деньги становятся следствием, а не борьбой</li>
+            <li>Женщина, которая прошла путь восстановления, роста и создания нового уровня жизни после кризисов</li>
+            <li>Практик, который работает не с теорией, а с реальными изменениями в жизни клиента</li>
+            <li>Создатель стратегических сессий, где проявляются глубинные причины внутренних блоков и ограничений</li>
+            <li>Профессионал, который убеждён: мышление всегда первично, а стратегия — вторична</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок 4: Главная идея -->
+    <section id="idea" class="idea-section">
+      <div class="container idea-container">
+        <h3>Моя главная идея сегодня:</h3>
+        <p>Я работаю с мышлением, которое создаёт реальность. И помогаю людям перестать бороться за деньги — и начать их создавать из внутреннего состояния.</p>
+        <p>Я жду тебя на своих программах, курсах и тренингах. И я всегда остаюсь на связи, чтобы помочь тебе увидеть свой настоящий потенциал — и начать опираться на него в жизни и доходе.</p>
+        <p>Обняла. Приподняла, крылья расправила 🕊️✨</p>
+      </div>
+    </section>
+
+    <!-- Блок 5: Выступления спикера -->
+    <section id="speaker" class="speaker-section">
+      <div class="container speaker-container">
+        <h2>Я выступаю как спикер</h2>
+        <p>Я выступаю на международных форумах и конференциях. Провожу авторские мастер‑классы, лекции и обучающие программы для аудитории от 50 до&nbsp;1000&nbsp;человек. Работаю на русском, литовском и английском языках, объединяя практический опыт, психологию и инструменты трансформационной работы. Некоторые проекты и мероприятия, где я была приглашена в качестве эксперта и спикера:</p>
+        <div class="speaker-list">
+          <div class="speaker-item">
+            <h4>ОАЭ</h4>
+            <ul>
+              <li>Аккредитованный спикер международной конференции для предпринимателей и экспертов</li>
+              <li>Capital Club Dubai</li>
+            </ul>
+          </div>
+          <div class="speaker-item">
+            <h4>Саудовская Аравия</h4>
+            <ul>
+              <li>Участие в международных профессиональных форумах и закрытых экспертных встречах</li>
+              <li>Конференции по развитию бизнеса и личной эффективности</li>
+            </ul>
+          </div>
+          <div class="speaker-item">
+            <h4>Литва</h4>
+            <ul>
+              <li>Выступления на профессиональных мероприятиях, обучающих программах и женских бизнес‑сообществах</li>
+              <li>Вильнюс, Каунас (образовательные и экспертные события)</li>
+            </ul>
+          </div>
+          <div class="speaker-item">
+            <h4>Москва</h4>
+            <ul>
+              <li>Участие в образовательных конференциях, тренингах и экспертных форумах</li>
+              <li>Бизнес‑ивенты и психологические профессиональные площадки</li>
+            </ul>
+          </div>
+        </div>
+        <div class="speaker-cta">
+          <a href="#contact" class="btn">Пригласить как спикера</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок 6: Бесплатные продукты -->
+    <section id="freebies" class="freebies-section">
+      <div class="container freebies-container">
+        <h2>Бесплатные продукты</h2>
+        <div class="freebies-grid">
+          <div class="freebie-card">
+            <span class="freebie-type">Чек‑лист</span>
+            <h3>«Где я сливаю свои деньги»</h3>
+            <p>Это не тест — это зеркало твоих финансовых сценариев и привычек, которые влияют на доход.</p>
+            <a href="#" class="btn-outline">Забрать чек‑лист</a>
+          </div>
+          <div class="freebie-card">
+            <span class="freebie-type">Гайд‑практика</span>
+            <h3>«Ресурсный круг»</h3>
+            <p>Простой практический инструмент для восстановления энергии, опоры и внутреннего состояния устойчивости.</p>
+            <a href="#" class="btn-outline">Забрать гайд</a>
+          </div>
+          <div class="freebie-card">
+            <span class="freebie-type">Гайд</span>
+            <h3>«5 ощущений: вернись в здесь и сейчас»</h3>
+            <p>Помогает быстро заземлиться, перестать теряться в эмоциях и вернуть контакт с телом и реальностью.</p>
+            <a href="#" class="btn-outline">Забрать гайд</a>
+          </div>
+          <div class="freebie-card">
+            <span class="freebie-type">Гайд</span>
+            <h3>«Деньги здесь и сейчас»</h3>
+            <p>Практика, которая помогает увидеть точки роста дохода и расширить финансовое мышление.</p>
+            <a href="#" class="btn-outline">Забрать гайд</a>
+          </div>
+          <div class="freebie-card">
+            <span class="freebie-type">Чек‑лист</span>
+            <h3>«Готова ли ты работать с темой развода и отношений»</h3>
+            <p>Помогает понять свою готовность к глубокой работе с отношениями и внутренними сценариями.</p>
+            <a href="#" class="btn-outline">Забрать чек‑лист</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок 7: Онлайн программы -->
+    <section id="online" class="programs-section">
+      <div class="container programs-container">
+        <h2>Онлайн программы</h2>
+        <div class="programs-grid">
+          <div class="program-card">
+            <h3>Активация денежных архетипов за 3&nbsp;недели</h3>
+            <p class="program-meta">Формат: онлайн‑программа · Длительность: 3&nbsp;недели · Стоимость: €300</p>
+            <p>За 3 недели вы определите свой денежный архетип, найдёте внутренние причины финансовых ограничений и активируете стратегии, которые помогут увеличить доход, уверенность и ощущение изобилия.</p>
+            <a href="#" class="btn">Узнать подробности</a>
+          </div>
+          <div class="program-card">
+            <h3>Книга «Женская сила, мудрость и любовь»</h3>
+            <p class="program-meta">Формат: электронная книга (PDF) · Доступ: сразу после оплаты · Стоимость: €300</p>
+            <p>Мини‑книга о женской силе, зрелой любви и здоровых отношениях. Это тёплый путеводитель, который поможет укрепить внутреннюю опору, научиться выбирать партнёра сердцем, строить гармоничные отношения и сохранять любовь к себе.</p>
+            <a href="#" class="btn">Узнать подробности</a>
+          </div>
+          <div class="program-card">
+            <h3>Диагностика по архетипам</h3>
+            <p class="program-meta">Формат: онлайн‑диагностика с экспертом · Доступ: сразу после оплаты · Стоимость: €15</p>
+            <p>Это не просто тест — это глубокая диагностика ваших внутренних стратегий и сценариев. После диагностики вы точно будете понимать, что сегодня ограничивает ваш рост, какие сценарии влияют на деньги, отношения и самореализацию, и с чего начать изменения, чтобы выйти на новый уровень жизни.</p>
+            <a href="#" class="btn">Забронировать место</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок 9: Карусель фотографий -->
+    <section id="carousel" class="carousel-section">
+      <div class="container carousel-container">
+        <div class="carousel-wrapper">
+          <button class="carousel-btn prev" aria-label="Предыдущий слайд">&#10094;</button>
+          <div class="carousel-track-wrapper">
+            <ul class="carousel-track">
+              <li class="carousel-slide"><img src="public/imges/karusel1.png" alt="Карусель фото 1" /></li>
+              <li class="carousel-slide"><img src="public/imges/karusel2.png" alt="Карусель фото 2" /></li>
+              <li class="carousel-slide"><img src="public/imges/karusel3.png" alt="Карусель фото 3" /></li>
+              <li class="carousel-slide"><img src="public/imges/karusel4.png" alt="Карусель фото 4" /></li>
+              <li class="carousel-slide"><img src="public/imges/karusel5.png" alt="Карусель фото 5" /></li>
+            </ul>
+          </div>
+          <button class="carousel-btn next" aria-label="Следующий слайд">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок 10: Связаться со мной (форма) -->
+    <section id="contact" class="contact-section">
+      <div class="container contact-container">
+        <h2>Связаться со мной</h2>
+        <p>Напишите здесь свой запрос — что сейчас вас беспокоит и в чём вы хотите разобраться. Какая ситуация требует решения прямо сейчас? С чем вам сложно справиться самостоятельно? Я и моя команда поможем вам подобрать подходящую программу, курс или формат работы под ваш запрос.</p>
+        <form class="contact-form" onsubmit="return false;">
+          <div class="form-group">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" placeholder="Ваше имя" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required />
+          </div>
+          <div class="form-group full-width">
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" rows="4" placeholder="Ваше сообщение" required></textarea>
+          </div>
+          <button type="submit" class="btn">Отправить запрос</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Блок 11: Отзывы (видео) -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="container testimonials-container">
+        <h2>Отзывы о моих проектах</h2>
+        <div class="testimonials-wrapper">
+          <button class="testimonials-btn prev" aria-label="Предыдущий отзыв">&#10094;</button>
+          <div class="testimonials-track-wrapper">
+            <ul class="testimonials-track">
+              <li class="testimonial-slide">
+                <video controls preload="metadata">
+                  <source src="public/video/otziv2.mp4" type="video/mp4" />
+                </video>
+              </li>
+              <li class="testimonial-slide">
+                <video controls preload="metadata">
+                  <source src="public/video/otziv3.mp4" type="video/mp4" />
+                </video>
+              </li>
+              <li class="testimonial-slide">
+                <video controls preload="metadata">
+                  <source src="public/video/otziv4.mp4" type="video/mp4" />
+                </video>
+              </li>
+              <li class="testimonial-slide">
+                <video controls preload="metadata">
+                  <source src="public/video/otziv5.mp4" type="video/mp4" />
+                </video>
+              </li>
+              <li class="testimonial-slide">
+                <video controls preload="metadata">
+                  <source src="public/video/otziv6.mp4" type="video/mp4" />
+                </video>
+              </li>
+              <li class="testimonial-slide">
+                <video controls preload="metadata">
+                  <source src="public/video/otziv7.mp4" type="video/mp4" />
+                </video>
+              </li>
+            </ul>
+          </div>
+          <button class="testimonials-btn next" aria-label="Следующий отзыв">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Подвал сайта -->
+    <footer class="site-footer">
+      <div class="container footer-container">
+        <div class="footer-column footer-brand">
+          <div class="logo-footer">Наталья Галюк‑Каушене</div>
+          <p>© 2026. Все права защищены.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Навигация</h4>
+          <ul>
+            <li><a href="#hero">Главная</a></li>
+            <li><a href="#about">Кто я</a></li>
+            <li><a href="#online">Программы</a></li>
+            <li><a href="#freebies">Бесплатно</a></li>
+            <li><a href="#contact">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Ресурсы</h4>
+          <ul>
+            <li><a href="#speaker">Спикерство</a></li>
+            <li><a href="#testimonials">Отзывы</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+        <div class="footer-column footer-contacts">
+          <h4>Контакты</h4>
+          <ul>
+            <li><a href="#">Telegram</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="mailto:info@example.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Подключение скрипта для взаимодействия: меню, карусель, отзывы -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
