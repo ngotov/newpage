@@ -1,0 +1,739 @@
+/*
+  Общие стили для сайта Натальи Галюк‑Каушене. Все цвета,
+  отступы и компоненты прописаны с использованием CSS‑переменных,
+  что облегчает дальнейшую настройку. Макет построен с упором
+  на адаптивность: сетки и flex‑контейнеры подстраиваются под
+  ширину экрана.
+*/
+
+/* Переменные цвета и базовые настройки */
+:root {
+  --primary-color: #c63157; /* насыщенный красный для акцентов */
+  --primary-hover: #a72946; /* тёмный оттенок красного для наведения */
+  --dark-color: #1d1d1d; /* глубокий тёмный для футера */
+  --light-color: #ffffff; /* белый цвет */
+  --background-light: #f9f9f9; /* светлый фон для секций */
+  --text-color: #333333; /* основной цвет текста */
+  --muted-color: #777777; /* второстепенный текст */
+  --transition-speed: 0.3s;
+  --header-height: 70px;
+}
+
+/* Сброс базовых стилей и унификация отступов */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--text-color);
+  background-color: var(--light-color);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 0.5em;
+  line-height: 1.2;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.2em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: min(1200px, 90%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Кнопки */
+.btn,
+.btn-outline {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  border-radius: 2em;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed);
+  text-align: center;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: none;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--primary-hover);
+}
+
+.btn-outline {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+/* Шапка и навигация */
+.site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--light-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+}
+
+.main-nav a {
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color var(--transition-speed);
+  white-space: nowrap;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--primary-color);
+}
+
+/* Бургер-меню для мобильных устройств */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 3px;
+  background-color: var(--text-color);
+  transition: transform var(--transition-speed);
+}
+
+@media (max-width: 900px) {
+  .main-nav {
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--light-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-speed) ease;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+    gap: 1em;
+  }
+  .main-nav.open {
+    max-height: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .nav-toggle {
+    display: flex;
+  }
+}
+
+/* Герой */
+.hero-section {
+  padding: 5rem 0 3rem;
+  background-color: var(--background-light);
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 450px;
+}
+
+.hero-text h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.hero-tagline {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.hero-list li {
+  position: relative;
+  padding-left: 1.6em;
+  margin-bottom: 0.6em;
+  line-height: 1.3;
+}
+
+.hero-list li::before {
+  content: '\2714'; /* символ галочки */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.hero-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-tagline {
+    font-size: 1.25rem;
+  }
+}
+
+/* Секция «Кто я?» */
+.about-section {
+  padding: 4rem 0;
+}
+
+.about-container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1 1 450px;
+}
+
+.about-video {
+  flex: 1 1 450px;
+}
+
+.about-video video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Секция «История и настоящее» */
+.history-section {
+  padding: 4rem 0;
+  background-color: var(--background-light);
+}
+
+.history-container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.history-column {
+  flex: 1 1 450px;
+}
+
+.history-column h3 {
+  color: var(--primary-color);
+  margin-bottom: 1em;
+}
+
+.history-column li {
+  position: relative;
+  padding-left: 1.6em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+.history-column li::before {
+  content: '\2714';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Секция «Главная идея» */
+.idea-section {
+  padding: 4rem 1rem;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  text-align: center;
+}
+
+.idea-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.idea-section p {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+}
+
+/* Секция «Спикерство» */
+.speaker-section {
+  padding: 4rem 0;
+}
+
+.speaker-container > h2 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.speaker-container > p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  color: var(--muted-color);
+}
+
+.speaker-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.speaker-item h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.speaker-item ul li {
+  position: relative;
+  padding-left: 1.4em;
+  margin-bottom: 0.4em;
+  color: var(--text-color);
+}
+
+.speaker-item ul li::before {
+  content: '\25C9'; /* маленький кружок */
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-size: 0.6em;
+  color: var(--primary-color);
+}
+
+.speaker-cta {
+  text-align: center;
+}
+
+/* Секция «Бесплатные продукты» */
+.freebies-section {
+  padding: 4rem 0;
+  background-color: var(--background-light);
+}
+
+.freebies-section h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.freebies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.freebie-card {
+  background-color: var(--light-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.freebie-card h3 {
+  margin-top: 0.3rem;
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.freebie-card .freebie-type {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  letter-spacing: 0.05em;
+}
+
+.freebie-card p {
+  flex-grow: 1;
+  color: var(--muted-color);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Секция «Онлайн программы» */
+.programs-section {
+  padding: 4rem 0;
+}
+
+.programs-container h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.program-card {
+  background-color: var(--light-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.program-card h3 {
+  margin-bottom: 0.6rem;
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.program-card .program-meta {
+  font-size: 0.9rem;
+  color: var(--muted-color);
+  margin-bottom: 0.8rem;
+}
+
+.program-card p {
+  flex-grow: 1;
+  color: var(--muted-color);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Секция «Карусель фотографий» */
+.carousel-section {
+  padding: 4rem 0;
+  background-color: var(--background-light);
+}
+
+.carousel-wrapper {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform var(--transition-speed) ease;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-speed);
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Секция «Связаться со мной» */
+.contact-section {
+  padding: 4rem 0;
+}
+
+.contact-container h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.contact-container p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  color: var(--muted-color);
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+.form-group label {
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(198, 49, 87, 0.2);
+}
+
+.contact-form .btn {
+  grid-column: span 2;
+  justify-self: center;
+  width: max-content;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+  .contact-form .btn {
+    grid-column: span 1;
+  }
+}
+
+/* Секция «Отзывы» */
+.testimonials-section {
+  padding: 4rem 0;
+  background-color: var(--background-light);
+}
+
+.testimonials-container h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.testimonials-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-track {
+  display: flex;
+  transition: transform var(--transition-speed) ease;
+}
+
+.testimonial-slide {
+  flex: 0 0 calc(33.333% - 20px);
+  padding: 0 10px;
+}
+
+.testimonial-slide video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-speed);
+}
+
+.testimonials-btn:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.testimonials-btn.prev {
+  left: 10px;
+}
+
+.testimonials-btn.next {
+  right: 10px;
+}
+
+@media (max-width: 900px) {
+  .testimonial-slide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonial-slide {
+    flex: 0 0 100%;
+  }
+}
+
+/* Футер */
+.site-footer {
+  background-color: var(--dark-color);
+  color: #ccc;
+  padding: 2.5rem 0;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.logo-footer {
+  font-weight: 700;
+  color: var(--light-color);
+  margin-bottom: 0.5rem;
+}
+
+.footer-column h4 {
+  margin-bottom: 1rem;
+  color: var(--light-color);
+  font-size: 1.1rem;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  font-size: 0.95rem;
+  transition: color var(--transition-speed);
+}
+
+.footer-column ul li a:hover {
+  color: var(--primary-color);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-links a {
+  color: #ccc;
+  font-size: 1.3rem;
+  transition: color var(--transition-speed);
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+}
